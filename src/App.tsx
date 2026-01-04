@@ -11,6 +11,7 @@ import { FAQPage } from "@/pages/FAQPage";
 import { PaymentPage } from "@/pages/PaymentPage";
 import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage";
 import { RefundPolicyPage } from "@/pages/RefundPolicyPage";
+import { TermsPage } from "@/pages/TermsPage";
 import { CartProvider } from "@/contexts/CartContext";
 import { WishlistProvider } from "@/contexts/WishlistContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -38,6 +39,7 @@ function App() {
                   <Route path="/payment" element={<PaymentPage />} />
                   <Route path="/privacy" element={<PrivacyPolicyPage />} />
                   <Route path="/refund" element={<RefundPolicyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
                 </Routes>
               </main>
               <Footer />
