@@ -8,7 +8,7 @@ import { useState } from "react";
 import { ProductDetailsModal } from "@/components/ProductDetailsModal";
 
 export function WishlistPage() {
-  const { items, removeFromWishlist } = useWishlist();
+  const { items } = useWishlist();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
