@@ -206,3 +206,35 @@
     }
   }
 }
+
+/* Google Translate Widget - Make it smaller */
+#google_translate_element {
+  transform: scale(0.75) !important;
+  transform-origin: bottom right !important;
+}
+
+#google_translate_element * {
+  font-size: 11px !important;
+}
+
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+.goog-te-menu-value {
+  font-size: 11px !important;
+  padding: 4px 8px !important;
+}
+
+.goog-te-menu-frame {
+  max-width: 180px !important;
+  font-size: 11px !important;
+}
+
+body .goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}

@@ -34,7 +34,7 @@ export function GoogleTranslate() {
     <div className="fixed bottom-4 right-4 z-40">
       <div
         id="google_translate_element"
-        className="rounded-xl overflow-hidden bg-[rgba(5,7,19,0.95)] backdrop-blur-xl border-2 border-[rgba(0,234,255,0.3)] shadow-2xl"
+        className="rounded-lg overflow-hidden bg-[rgba(5,7,19,0.95)] backdrop-blur-xl border border-[rgba(0,234,255,0.3)] shadow-lg"
       />
     </div>
   );

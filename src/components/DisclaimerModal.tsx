@@ -24,8 +24,8 @@ export function DisclaimerModal() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
-      <div className="max-w-md w-full p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0d1020] to-[#050713] border-2 border-[rgba(255,193,7,0.5)] shadow-[0_0_50px_rgba(255,193,7,0.3)] relative animate-fadeInUp">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md overflow-y-auto">
+      <div className="max-w-lg w-full max-h-[90vh] my-auto p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0d1020] to-[#050713] border-2 border-[rgba(255,193,7,0.5)] shadow-[0_0_50px_rgba(255,193,7,0.3)] relative animate-fadeInUp flex flex-col">
         {/* Close Button */}
         <button
           onClick={handleClose}
@@ -47,8 +47,8 @@ export function DisclaimerModal() {
           {t("disclaimer.title")}
         </h2>
 
-        {/* Warning Message */}
-        <div className="space-y-4 sm:space-y-5 mb-6 sm:mb-8">
+        {/* Warning Message - Scrollable */}
+        <div className="space-y-4 sm:space-y-5 mb-6 sm:mb-8 overflow-y-auto flex-1 min-h-0 pr-2">
           <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-r from-[rgba(255,193,7,0.15)] to-[rgba(255,152,0,0.15)] border-2 border-[rgba(255,193,7,0.3)]">
             <p className="text-sm sm:text-base text-white font-semibold leading-relaxed text-center">
               {t("disclaimer.message1")}
@@ -84,13 +84,15 @@ export function DisclaimerModal() {
           </p>
         </div>
 
-        {/* Accept Button */}
-        <Button
-          onClick={handleClose}
-          className="w-full rounded-xl sm:rounded-2xl py-4 sm:py-6 text-base sm:text-lg font-black bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] hover:from-[#ff4fd8] hover:via-[#8a3dff] hover:to-[#00eaff] shadow-[0_0_40px_rgba(138,61,255,0.6)] hover:shadow-[0_0_60px_rgba(138,61,255,0.8)] transition-all duration-500"
-        >
-          {t("disclaimer.understand")}
-        </Button>
+        {/* Accept Button - Always Visible */}
+        <div className="mt-auto pt-4">
+          <Button
+            onClick={handleClose}
+            className="w-full rounded-xl sm:rounded-2xl py-4 sm:py-6 text-base sm:text-lg font-black bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] hover:from-[#ff4fd8] hover:via-[#8a3dff] hover:to-[#00eaff] shadow-[0_0_40px_rgba(138,61,255,0.6)] hover:shadow-[0_0_60px_rgba(138,61,255,0.8)] transition-all duration-500"
+          >
+            {t("disclaimer.understand")}
+          </Button>
+        </div>
       </div>
     </div>
   );
