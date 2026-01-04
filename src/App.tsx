@@ -16,6 +16,7 @@ import { WishlistProvider } from "@/contexts/WishlistContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { GoogleTranslate } from "@/components/GoogleTranslate";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { DisclaimerModal } from "@/components/DisclaimerModal";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
               <Footer />
               <GoogleTranslate />
               <ScrollToTop />
+              <DisclaimerModal />
             </div>
           </Router>
         </WishlistProvider>

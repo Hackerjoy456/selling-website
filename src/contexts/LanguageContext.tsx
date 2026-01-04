@@ -150,6 +150,14 @@ const translations: Record<Language, Record<string, string>> = {
     "refund.step3Text": "If approved, refunds will be processed within 5-7 business days to your original payment method.",
     "refund.important": "Important Notes",
     "refund.importantText": "All refund requests are subject to review. We reserve the right to deny refunds if the product has been misused or if the request does not meet our refund criteria.",
+    // Disclaimer
+    "disclaimer.title": "⚠️ Important Notice",
+    "disclaimer.message1": "This website is totally run by me personally. I am operating this independently.",
+    "disclaimer.message2": "This is NOT related to CloudEngine in any way, shape, or form.",
+    "disclaimer.message3": "I am currently offline, but you can still browse and place orders.",
+    "disclaimer.message4": "If anything happens or if you have any issues, ONLY contact me directly. Do not contact CloudEngine or any other party.",
+    "disclaimer.contactLabel": "Contact Me Directly:",
+    "disclaimer.understand": "I Understand",
   },
   bn: {
     "nav.home": "হোম",
@@ -197,6 +205,14 @@ const translations: Record<Language, Record<string, string>> = {
     "common.selectDuration": "সময়কাল নির্বাচন করুন",
     "common.selectedPlan": "নির্বাচিত পরিকল্পনা",
     "common.startingFrom": "শুরু থেকে",
+    // Disclaimer
+    "disclaimer.title": "⚠️ গুরুত্বপূর্ণ বিজ্ঞপ্তি",
+    "disclaimer.message1": "এই ওয়েবসাইটটি সম্পূর্ণভাবে আমার দ্বারা পরিচালিত। আমি এটি স্বাধীনভাবে পরিচালনা করছি।",
+    "disclaimer.message2": "এটি কোনোভাবেই CloudEngine এর সাথে সম্পর্কিত নয়।",
+    "disclaimer.message3": "আমি বর্তমানে অফলাইনে আছি, তবে আপনি এখনও ব্রাউজ করতে এবং অর্ডার দিতে পারেন।",
+    "disclaimer.message4": "যদি কোনো সমস্যা হয় বা আপনার কোনো প্রশ্ন থাকে, শুধুমাত্র আমার সাথে সরাসরি যোগাযোগ করুন। CloudEngine বা অন্য কোনো পক্ষের সাথে যোগাযোগ করবেন না।",
+    "disclaimer.contactLabel": "আমার সাথে সরাসরি যোগাযোগ করুন:",
+    "disclaimer.understand": "আমি বুঝেছি",
   },
   hi: {
     "nav.home": "होम",
