@@ -17,7 +17,7 @@ export function Footer() {
           <div className="flex justify-center gap-4 sm:gap-5 md:gap-6 my-8 sm:my-10">
             {/* Telegram */}
             <a
-              href="https://t.me/NIANGII"
+              href="https://t.me/hibigibi123"
               target="_blank"
               rel="noopener noreferrer"
               className="group w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(42,171,238,0.3)] transition-all duration-300 hover:bg-[#2AABEE] hover:border-[#2AABEE] hover:shadow-[0_0_40px_rgba(42,171,238,0.9)] hover:-translate-y-3 hover:scale-110"

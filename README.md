@@ -1,37 +1,80 @@
-# RANDOM CHEAT SELLING - Premium Gaming Solutions
+# RANDOM CHEAT SELLING
 
-A modern, professional e-commerce website built with React, TypeScript, Vite, and Tailwind CSS for selling premium gaming cheats and mods.
+> Premium Gaming Solutions | Trusted Reseller | 24/7 Support
 
-## 🚀 Features
+A modern, professional e-commerce platform built with cutting-edge web technologies for selling premium gaming cheats and modifications. Designed with user experience and performance in mind.
 
-- ✅ **Multi-page System** - Home, Products, Cart, Wishlist, About, Contact, FAQ, Payment
-- ✅ **Product Management** - Detailed product cards with images, features, and pricing
-- ✅ **Shopping Cart** - Full cart functionality with quantity management
-- ✅ **Wishlist** - Save products for later
-- ✅ **Discount/Coupon System** - Apply promo codes for discounts
-- ✅ **Product Videos/Demos** - Optional YouTube video embeds
-- ✅ **Product Recommendations** - "You May Also Like" section
-- ✅ **Quick View** - Hover to preview products quickly
-- ✅ **Stock Status** - Real-time stock indicators
-- ✅ **Multi-language Support** - 20+ languages with Google Translate
-- ✅ **Payment Integration** - Multiple payment methods (bKash, Nagad, UPI, Binance)
-- ✅ **Responsive Design** - Perfect on PC, Mobile, Tablet, and TV
-- ✅ **Trust Badges** - SSL Secure, Verified Seller badges
-- ✅ **Privacy & Refund Policies** - Complete legal pages
+![React](https://img.shields.io/badge/React-19.2.3-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-7.3.0-646CFF?logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.19-38B2AC?logo=tailwind-css)
+
+---
+
+## ✨ Features
+
+### 🛍️ E-Commerce Functionality
+- **Multi-page System** - Complete navigation with Home, Products, Cart, Wishlist, About, Contact, FAQ, and Payment pages
+- **Shopping Cart** - Full cart functionality with quantity management and real-time price calculation
+- **Wishlist** - Save favorite products for later purchase
+- **Discount System** - Promo code support with percentage-based discounts
+- **Product Management** - Detailed product cards with images, features, pricing, and stock status
+
+### 🎨 User Experience
+- **Product Quick View** - Hover to preview products without leaving the page
+- **Product Recommendations** - Smart "You May Also Like" suggestions
+- **Product Videos/Demos** - Optional YouTube video embeds for product demonstrations
+- **Stock Status Indicators** - Real-time availability (In Stock, Low Stock, Out of Stock)
+- **Responsive Design** - Optimized for PC, Mobile, Tablet, and TV displays
+
+### 🌍 Internationalization
+- **Multi-language Support** - 20+ languages with Google Translate integration
+- **Language Persistence** - User language preference saved in localStorage
+- **Auto-detection** - Automatic language detection based on browser settings
+
+### 💳 Payment Integration
+- **Multiple Payment Methods** - Support for bKash, Nagad, UPI, and Binance
+- **Easy Copy Functionality** - One-click copy for payment details
+- **Payment Instructions** - Clear step-by-step payment process
+- **QR Code Support** - Visual payment method images with collapse/expand
+
+### 🔒 Trust & Security
+- **SSL Secure** - Encrypted connections
+- **Trust Badges** - Verified seller and security indicators
+- **Privacy Policy** - Complete privacy policy page
+- **Refund Policy** - Transparent refund terms and conditions
+
+---
 
 ## 🛠️ Tech Stack
 
-- **React 19** - UI Library
-- **TypeScript** - Type Safety
-- **Vite** - Build Tool
-- **Tailwind CSS** - Styling
-- **React Router** - Navigation
-- **shadcn-ui** - UI Components
-- **Lucide React** - Icons
+| Category | Technology |
+|----------|-----------|
+| **Framework** | React 19.2.3 |
+| **Language** | TypeScript 5.9.3 |
+| **Build Tool** | Vite 7.3.0 |
+| **Styling** | Tailwind CSS 3.4.19 |
+| **Routing** | React Router DOM 7.11.0 |
+| **UI Components** | shadcn-ui |
+| **Icons** | Lucide React |
+| **State Management** | React Context API |
+
+---
 
 ## 📦 Installation
 
+### Prerequisites
+- Node.js 18+ and npm
+
+### Setup
+
 ```bash
+# Clone the repository
+git clone https://github.com/Hackerjoy456/selling-website.git
+
+# Navigate to project directory
+cd selling-website
+
 # Install dependencies
 npm install
 
@@ -45,60 +88,86 @@ npm run build
 npm run preview
 ```
 
+The development server will start at `http://localhost:5173`
+
+---
+
 ## 🌐 Deployment
 
-This website is configured for deployment on **Cloudflare Pages**.
+### Cloudflare Pages (Recommended)
 
-### Quick Deploy to Cloudflare Pages
+This project is optimized for deployment on **Cloudflare Pages**.
 
-1. **Push to GitHub** (already done)
-   ```bash
-   git push -u origin main
-   ```
+#### Quick Setup
 
-2. **Connect to Cloudflare Pages**
+1. **Connect Repository**
    - Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
    - Navigate to **Workers & Pages** → **Create Application** → **Pages**
-   - Click **Connect to Git**
-   - Select your repository: `Hackerjoy456/selling-website`
-   - Configure build settings:
-     - **Build command**: `npm run build`
-     - **Build output directory**: `dist`
-     - **Framework preset**: `Vite`
+   - Click **Connect to Git** and authorize GitHub
+   - Select repository: `Hackerjoy456/selling-website`
+
+2. **Configure Build Settings**
+   - **Framework preset**: `Vite`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - **Root directory**: `/`
+
+3. **Deploy**
    - Click **Save and Deploy**
+   - Your site will be live automatically!
 
-3. **Your site will be live at**: `https://selling-website.pages.dev`
+#### Benefits
+- ✅ Global CDN with 200+ edge locations
+- ✅ Automatic HTTPS/SSL
+- ✅ DDoS protection
+- ✅ Automatic deployments on git push
+- ✅ Free tier available
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+---
 
 ## 📁 Project Structure
 
 ```
+selling-website/
 ├── public/
-│   ├── assets/          # Images and static files
-│   └── _redirects      # SPA routing configuration
+│   ├── assets/              # Static assets (images, logos)
+│   └── _redirects           # SPA routing configuration
 ├── src/
-│   ├── components/     # React components
-│   │   ├── ui/         # shadcn-ui components
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   ├── ProductCard.tsx
+│   ├── components/          # React components
+│   │   ├── ui/             # shadcn-ui base components
+│   │   ├── Navbar.tsx      # Navigation bar
+│   │   ├── Footer.tsx      # Footer component
+│   │   ├── ProductCard.tsx # Product display card
+│   │   ├── ProductDetailsModal.tsx
+│   │   ├── DisclaimerModal.tsx
 │   │   └── ...
-│   ├── contexts/       # React Context providers
+│   ├── contexts/           # React Context providers
 │   │   ├── CartContext.tsx
 │   │   ├── WishlistContext.tsx
 │   │   └── LanguageContext.tsx
-│   ├── data/           # Data files
-│   │   └── products.ts
-│   ├── pages/          # Page components
-│   ├── types/          # TypeScript types
-│   └── lib/            # Utility functions
+│   ├── pages/              # Page components
+│   │   ├── HomePage.tsx
+│   │   ├── ProductsPage.tsx
+│   │   ├── CartPage.tsx
+│   │   └── ...
+│   ├── data/               # Data files
+│   │   └── products.ts     # Product catalog
+│   ├── types/              # TypeScript type definitions
+│   │   └── index.ts
+│   ├── lib/                # Utility functions
+│   │   └── utils.ts
+│   ├── App.tsx             # Main application component
+│   ├── main.tsx            # Application entry point
+│   └── index.css           # Global styles
 ├── index.html
 ├── package.json
 ├── vite.config.ts
 ├── tailwind.config.js
-└── tsconfig.json
+├── tsconfig.json
+└── wrangler.toml           # Cloudflare configuration
 ```
+
+---
 
 ## 🎨 Customization
 
@@ -108,17 +177,19 @@ Edit `src/data/products.ts`:
 
 ```typescript
 {
-  id: "product-id",
+  id: "unique-product-id",
   name: "Product Name",
   subtitle: "RANDOM CHEAT SELLING",
   image: "/assets/product-image.jpg",
-  description: "Product description",
-  features: ["Feature 1", "Feature 2"],
-  videoUrl: "https://youtube.com/watch?v=...", // Optional
-  stockStatus: "in_stock", // or "low_stock" or "out_of_stock"
+  description: "Detailed product description",
+  features: ["Feature 1", "Feature 2", "Feature 3"],
+  videoUrl: "https://youtube.com/watch?v=VIDEO_ID", // Optional
+  stockStatus: "in_stock", // "in_stock" | "low_stock" | "out_of_stock"
+  stockCount: 10, // Optional
   prices: [
     createPrice("1 Day", 2),
     createPrice("7 Days", 4),
+    createPrice("30 Days", 10),
   ],
 }
 ```
@@ -129,27 +200,59 @@ Edit `src/pages/CartPage.tsx`:
 
 ```typescript
 const coupons: Record<string, number> = {
-  "WELCOME10": 10,
-  "SAVE20": 20,
-  "YOURCODE": 15,
+  "WELCOME10": 10,  // 10% discount
+  "SAVE20": 20,     // 20% discount
+  "PREMIUM15": 15,  // 15% discount
+  "YOURCODE": 15,   // Add your custom codes
 };
 ```
 
-## 🔗 Links
+### Customizing Colors
 
-- **WhatsApp**: [Contact Us](https://wa.me/8801629933030)
-- **Telegram**: [@NIANGII](https://t.me/NIANGII)
+Edit `tailwind.config.js` to modify the color scheme:
+
+```javascript
+colors: {
+  primary: '#00eaff',
+  secondary: '#8a3dff',
+  accent: '#ff4fd8',
+  // ... customize as needed
+}
+```
+
+---
+
+## 🔗 Contact & Support
+
+### Get in Touch
+
+- **WhatsApp**: [+8801629933030](https://wa.me/8801629933030)
+- **Telegram**: [@hibigibi123](https://t.me/hibigibi123)
 - **Discord**: [Join Server](https://discord.gg/vsAavHVEe2)
 - **YouTube**: [@cloudengineff](https://www.youtube.com/@cloudengineff)
+
+### Support Hours
+24/7 Available - We're always here to help!
+
+---
 
 ## 📄 License
 
 © 2025 RANDOM CHEAT SELLING | All Rights Reserved
 
-## 🙏 Support
-
-For support, contact us via WhatsApp or visit our [Contact Page](/contact).
+This project is proprietary software. Unauthorized copying, modification, distribution, or use of this software, via any medium, is strictly prohibited.
 
 ---
 
-**Built with ❤️ using React, TypeScript, and Tailwind CSS**
+## 🙏 Acknowledgments
+
+- Built with [React](https://react.dev/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons by [Lucide](https://lucide.dev/)
+- UI Components by [shadcn/ui](https://ui.shadcn.com/)
+
+---
+
+**Built with ❤️ using modern web technologies**
+
+*For inquiries, support, or business opportunities, please contact us through the channels listed above.*
