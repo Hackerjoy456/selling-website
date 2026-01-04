@@ -236,6 +236,12 @@ colors: {
 
 ---
 
+## 👥 Contributors
+
+- **Hackerjoy456** (BIJOY) - Project maintainer and developer
+
+---
+
 ## 📄 License
 
 © 2025 RANDOM CHEAT SELLING | All Rights Reserved
