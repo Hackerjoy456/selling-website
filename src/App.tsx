@@ -9,10 +9,13 @@ import { AboutPage } from "@/pages/AboutPage";
 import { ContactPage } from "@/pages/ContactPage";
 import { FAQPage } from "@/pages/FAQPage";
 import { PaymentPage } from "@/pages/PaymentPage";
+import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage";
+import { RefundPolicyPage } from "@/pages/RefundPolicyPage";
 import { CartProvider } from "@/contexts/CartContext";
 import { WishlistProvider } from "@/contexts/WishlistContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { GoogleTranslate } from "@/components/GoogleTranslate";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 function App() {
   return (
@@ -32,10 +35,13 @@ function App() {
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/faq" element={<FAQPage />} />
                   <Route path="/payment" element={<PaymentPage />} />
+                  <Route path="/privacy" element={<PrivacyPolicyPage />} />
+                  <Route path="/refund" element={<RefundPolicyPage />} />
                 </Routes>
               </main>
               <Footer />
               <GoogleTranslate />
+              <ScrollToTop />
             </div>
           </Router>
         </WishlistProvider>

@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Product } from "@/types";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Sparkles, ArrowRight, Heart } from "lucide-react";
+import { Sparkles, ArrowRight, Heart, Eye } from "lucide-react";
 import { useWishlist } from "@/contexts/WishlistContext";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ProductQuickView } from "@/components/ProductQuickView";
 
 interface ProductCardProps {
   product: Product;
@@ -14,17 +16,30 @@ export function ProductCard({ product, onProductClick }: ProductCardProps) {
   const { isInWishlist, toggleWishlist } = useWishlist();
   const { t } = useLanguage();
   const inWishlist = isInWishlist(product.id);
+  const [showQuickView, setShowQuickView] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
   const handleWishlistClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     toggleWishlist(product);
   };
 
+  const getStockStatus = () => {
+    if (product.stockStatus === "out_of_stock") return { text: t("stock.outOfStock"), color: "red", bg: "rgba(239,68,68,0.2)", border: "rgba(239,68,68,0.4)" };
+    if (product.stockStatus === "low_stock") return { text: t("stock.lowStock"), color: "yellow", bg: "rgba(234,179,8,0.2)", border: "rgba(234,179,8,0.4)" };
+    return { text: t("stock.inStock"), color: "green", bg: "rgba(34,197,94,0.2)", border: "rgba(34,197,94,0.4)" };
+  };
+
+  const stockInfo = getStockStatus();
+
   return (
-    <Card 
-      className="h-full flex flex-col group cursor-pointer overflow-hidden relative transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_50px_rgba(138,61,255,0.4)] border-2 border-[rgba(255,255,255,0.1)]"
-      onClick={() => onProductClick(product)}
-    >
+    <>
+      <Card 
+        className="h-full flex flex-col group cursor-pointer overflow-hidden relative transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_50px_rgba(138,61,255,0.4)] border-2 border-[rgba(255,255,255,0.1)]"
+        onClick={() => onProductClick(product)}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
       {/* Animated Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[rgba(0,234,255,0.05)] via-transparent to-[rgba(138,61,255,0.05)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
@@ -45,15 +60,31 @@ export function ProductCard({ product, onProductClick }: ProductCardProps) {
           <Heart className={`w-4 h-4 sm:w-5 sm:h-5 transition-all ${inWishlist ? 'text-[#ff4fd8] fill-[#ff4fd8]' : 'text-white group-hover:text-[#ff4fd8]'}`} />
         </button>
 
-        {/* Availability Badge */}
+        {/* Stock Status Badge */}
         <div className="absolute bottom-3 left-3 z-20">
-          <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-gradient-to-r from-[rgba(34,197,94,0.3)] to-[rgba(34,197,94,0.2)] backdrop-blur-md border border-[rgba(34,197,94,0.4)]">
+          <div className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg backdrop-blur-md border`} style={{ background: stockInfo.bg, borderColor: stockInfo.border }}>
             <div className="flex items-center gap-1.5 sm:gap-2">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span className="text-xs font-black text-white">{t("common.inStock")}</span>
+              <span className={`w-2 h-2 rounded-full ${stockInfo.color === "green" ? "bg-green-400 animate-pulse" : stockInfo.color === "yellow" ? "bg-yellow-400" : "bg-red-400"}`}></span>
+              <span className="text-xs font-black text-white">{stockInfo.text}</span>
             </div>
           </div>
         </div>
+
+        {/* Quick View Button - Shows on Hover */}
+        {isHovering && (
+          <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowQuickView(true);
+              }}
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#00eaff] to-[#8a3dff] text-white font-black flex items-center gap-2 hover:scale-110 transition-transform duration-300 shadow-[0_0_30px_rgba(138,61,255,0.6)]"
+            >
+              <Eye className="w-5 h-5" />
+              {t("productCard.quickView")}
+            </button>
+          </div>
+        )}
       </div>
 
       <CardHeader className="pb-3 sm:pb-4 relative z-10">
@@ -114,5 +145,17 @@ export function ProductCard({ product, onProductClick }: ProductCardProps) {
         </button>
       </CardContent>
     </Card>
+
+    <ProductQuickView
+      product={product}
+      isOpen={showQuickView}
+      onClose={() => setShowQuickView(false)}
+      onViewDetails={() => {
+        setShowQuickView(false);
+        onProductClick(product);
+      }}
+    />
+    </>
   );
 }
+

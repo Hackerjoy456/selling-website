@@ -1,12 +1,48 @@
+import { useState } from "react";
 import { useCart } from "@/contexts/CartContext";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Trash2, Plus, Minus, ShoppingBag, MessageCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CouponInput } from "@/components/CouponInput";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function CartPage() {
   const { items, removeFromCart, updateQuantity, clearCart, getTotalPrice } = useCart();
+  const { t } = useLanguage();
+  const [appliedCoupon, setAppliedCoupon] = useState<string | null>(null);
+  const [discount, setDiscount] = useState(0);
+  
   const total = getTotalPrice();
+  const discountedTotal = discount > 0 ? {
+    inr: Math.round(total.inr * (1 - discount / 100)),
+    bdt: Math.round(total.bdt * (1 - discount / 100)),
+    usdt: total.usdt > 0 ? Math.round(total.usdt * (1 - discount / 100) * 100) / 100 : 0
+  } : total;
+
+  const handleApplyCoupon = (code: string) => {
+    if (!code) {
+      setAppliedCoupon(null);
+      setDiscount(0);
+      return;
+    }
+    
+    // Example coupon codes - you can expand this
+    const coupons: Record<string, number> = {
+      "WELCOME10": 10,
+      "SAVE20": 20,
+      "PREMIUM15": 15,
+      "FIRST5": 5,
+    };
+
+    if (coupons[code]) {
+      setAppliedCoupon(code);
+      setDiscount(coupons[code]);
+    } else {
+      setAppliedCoupon(null);
+      setDiscount(0);
+    }
+  };
 
   if (items.length === 0) {
     return (
@@ -122,33 +158,38 @@ export function CartPage() {
         {/* Order Summary */}
         <div className="lg:col-span-1">
           <Card className="p-6 md:p-8 border-2 border-[rgba(0,234,255,0.3)] bg-gradient-to-br from-[rgba(0,234,255,0.1)] to-[rgba(138,61,255,0.1)] sticky top-24">
-            <h2 className="text-2xl font-black text-white mb-6">Order Summary</h2>
+            <h2 className="text-2xl font-black text-white mb-6">{t("cart.orderSummary")}</h2>
+            
+            {/* Coupon Input */}
+            <div className="mb-6">
+              <CouponInput
+                onApplyCoupon={handleApplyCoupon}
+                appliedCoupon={appliedCoupon}
+                discount={discount}
+              />
+            </div>
             
             <div className="space-y-4 mb-8">
               <div className="flex justify-between text-[#a9b0ff] font-medium">
-                <span>Subtotal ({items.reduce((sum, item) => sum + item.quantity, 0)} items)</span>
+                <span>{t("cart.subtotal")} ({items.reduce((sum, item) => sum + item.quantity, 0)} {t("cart.items")})</span>
                 <span className="text-white font-bold">₹{total.inr}</span>
               </div>
-              <div className="flex justify-between text-[#a9b0ff] font-medium">
-                <span>BDT</span>
-                <span className="text-white font-bold">{total.bdt}</span>
-              </div>
-              {total.usdt > 0 && (
-                <div className="flex justify-between text-[#a9b0ff] font-medium">
-                  <span>USDT</span>
-                  <span className="text-white font-bold">{total.usdt}</span>
+              {discount > 0 && (
+                <div className="flex justify-between text-green-400 font-medium">
+                  <span>{t("cart.discount")} ({discount}%)</span>
+                  <span className="font-bold">-₹{total.inr - discountedTotal.inr}</span>
                 </div>
               )}
               <div className="h-px bg-gradient-to-r from-transparent via-[rgba(0,234,255,0.5)] to-transparent my-4"></div>
               <div className="flex justify-between">
-                <span className="text-xl font-black text-white">Total</span>
+                <span className="text-xl font-black text-white">{t("cart.total")}</span>
                 <div className="text-right">
                   <div className="text-3xl font-black bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] bg-clip-text text-transparent">
-                    ₹{total.inr}
+                    ₹{discountedTotal.inr}
                   </div>
                   <div className="text-sm text-[#a9b0ff] font-medium">
-                    {total.bdt} BDT
-                    {total.usdt > 0 && ` • ${total.usdt} USDT`}
+                    {discountedTotal.bdt} BDT
+                    {discountedTotal.usdt > 0 && ` • ${discountedTotal.usdt} USDT`}
                   </div>
                 </div>
               </div>

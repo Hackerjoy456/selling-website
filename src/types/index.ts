@@ -14,4 +14,23 @@ export interface Product {
   prices: PriceOption[];
   description?: string;
   features?: string[];
+  videoUrl?: string; // Optional YouTube video URL
+  stockStatus?: "in_stock" | "low_stock" | "out_of_stock"; // Stock status
+  stockCount?: number; // Optional stock count
+}
+
+export interface Coupon {
+  code: string;
+  discount: number; // Percentage discount
+  type: "percentage" | "fixed";
+  minPurchase?: number;
+  validUntil?: string;
+}
+
+export interface GiftCard {
+  id: string;
+  amount: number;
+  code: string;
+  isValid: boolean;
+  expiresAt?: string;
 }

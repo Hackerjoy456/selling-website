@@ -4,6 +4,8 @@ import { Modal } from "@/components/ui/modal";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, CheckCircle2, Phone, Sparkles, TrendingUp } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ProductRecommendations } from "@/components/ProductRecommendations";
+import { products } from "@/data/products";
 
 interface ProductDetailsModalProps {
   product: Product | null;
@@ -92,6 +94,33 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
             </div>
           </div>
         </div>
+
+        {/* Video/Demo Section - Optional */}
+        {product.videoUrl && (
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[rgba(255,79,216,0.5)] to-transparent"></div>
+              <h3 className="text-3xl font-black text-white flex items-center gap-3">
+                <Sparkles className="w-6 h-6 text-[#ff4fd8]" />
+                {t("productDetails.videoDemo")}
+              </h3>
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[rgba(255,79,216,0.5)] to-transparent"></div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border-2 border-[rgba(255,255,255,0.2)] bg-black">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src={product.videoUrl.includes('youtube.com') || product.videoUrl.includes('youtu.be') 
+                    ? product.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')
+                    : product.videoUrl}
+                  title={`${product.name} Demo`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Features Section - Premium Design */}
         {product.features && product.features.length > 0 && (
@@ -236,9 +265,21 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
             </a>
           </Button>
           <p className="text-center text-sm sm:text-base text-[#a9b0ff] mt-4 font-medium">
-            Click to contact us via WhatsApp for instant purchase • 24/7 Support Available
+            {t("productDetails.contactSupport")}
           </p>
         </div>
+
+        {/* Product Recommendations */}
+        <ProductRecommendations
+          currentProduct={product}
+          allProducts={products}
+          onProductClick={(newProduct) => {
+            onClose();
+            setTimeout(() => {
+              window.location.href = `/products#${newProduct.id}`;
+            }, 300);
+          }}
+        />
       </div>
     </Modal>
   );

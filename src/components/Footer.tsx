@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { Send, MessageCircle, Youtube } from "lucide-react";
 import { DiscordIcon } from "@/components/icons/DiscordIcon";
+import { TrustBadges } from "@/components/TrustBadges";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Footer() {
@@ -58,7 +60,23 @@ export function Footer() {
             </a>
           </div>
 
+          {/* Trust Badges */}
+          <TrustBadges />
+
           <div className="border-t-2 border-[rgba(255,255,255,0.15)] pt-6 sm:pt-8 mt-6 sm:mt-8">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-4">
+              <Link to="/privacy" className="text-xs sm:text-sm text-[#a9b0ff] hover:text-[#00eaff] font-semibold transition-colors">
+                {t("footer.privacy")}
+              </Link>
+              <span className="text-[#8a8a8a]">•</span>
+              <Link to="/refund" className="text-xs sm:text-sm text-[#a9b0ff] hover:text-[#00eaff] font-semibold transition-colors">
+                {t("footer.refund")}
+              </Link>
+              <span className="text-[#8a8a8a]">•</span>
+              <Link to="/terms" className="text-xs sm:text-sm text-[#a9b0ff] hover:text-[#00eaff] font-semibold transition-colors">
+                {t("footer.terms")}
+              </Link>
+            </div>
             <p className="text-sm sm:text-base text-[#a9b0ff] font-semibold">
               {t("footer.copyright")}
             </p>
