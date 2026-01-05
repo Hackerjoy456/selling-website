@@ -288,7 +288,7 @@ export const products: Product[] = [
     id: "free-fire-uid-bypass",
     name: "FREE FIRE UID BYPASS",
     subtitle: "RANDOM CHEAT SELLING",
-    image: "/assets/logo.jpg",
+    image: "/assets/pc-to-mobile-uid.jpg",
     description: "✅ Advanced UID Bypass for Free Fire - Works on all servers, emulators, and game modes. Cross-platform reconnect support.",
     features: [
       "[+] Works on all servers",
