@@ -284,4 +284,33 @@ export const products: Product[] = [
       createPrice("20 Days", 6),
     ],
   },
+  {
+    id: "free-fire-uid-bypass",
+    name: "FREE FIRE UID BYPASS",
+    subtitle: "RANDOM CHEAT SELLING",
+    image: "/assets/logo.jpg",
+    description: "✅ Advanced UID Bypass for Free Fire - Works on all servers, emulators, and game modes. Cross-platform reconnect support.",
+    features: [
+      "[+] Works on all servers",
+      "[+] Available in Custom, CS Rank and BR-Ranked modes",
+      "[+] Works on all Emulator",
+      "[+] Free Fire and Free Fire max working",
+      "[+] Gameplay Spectate Possible",
+      "[+] Reconnect Possible",
+      "[+] 💻Pc to 📱Mobile & Mobile📱 to pc💻 Reconnect Possible"
+    ],
+    prices: [
+      createPrice("1 Day", 1),
+      createPrice("1 Week", 4),
+      createPrice("15 Days", 6),
+      createPrice("1 Month", 8),
+      createPrice("2 Months", 14),
+      createPrice("3 Months", 22),
+      createPrice("4 Months", 28),
+      createPrice("5 Months", 34),
+      createPrice("6 Months", 39),
+      createPrice("Permanent", 130),
+    ],
+    videoUrl: "https://www.youtube.com/watch?v=Mjj3VdCpXQU",
+  },
 ];
