@@ -13,7 +13,7 @@ function createPrice(duration: string, usdt: number, note?: string) {
 
 export const products: Product[] = [
   {
-    id: "drip-clint-mobile",
+    id: "drip-client-mobile",
     name: "DRIP CLIENT MOD MENU APK",
     subtitle: "RANDOM CHEAT SELLING",
     image: "/assets/Drip clint.jpg",
@@ -28,7 +28,7 @@ export const products: Product[] = [
       "Teleport 8m",
       "Up Player",
       "Auto Swap Weapon",
-      "Runs directly on phone",
+      "Runs directly on mobile",
       "Easy to use"
     ],
     prices: [
@@ -39,16 +39,23 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "drip-clint-pc",
-    name: "DRIP CLINT – PC",
+    id: "drip-client-pc",
+    name: "DRIP CLIENT – PC",
     subtitle: "RANDOM CHEAT SELLING",
     image: "/assets/Drip clint.jpg",
-    description: "Professional PC gaming solution with advanced features for competitive play.",
+    description: "Professional PC gaming solution with advanced features for competitive play. Runs on PC.",
     features: [
-      "High performance",
-      "Advanced ESP",
-      "Aimbot system",
-      "PC optimized"
+      "Aim Kill",
+      "Silent Aim",
+      "Silent Kill",
+      "Fly Hack",
+      "God Mode (Ghost)",
+      "Speed Timer",
+      "Teleport 8m",
+      "Up Player",
+      "Auto Swap Weapon",
+      "Runs on PC",
+      "Easy to use"
     ],
     prices: [
       createPrice("1 Day", 2),
@@ -58,16 +65,23 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "drip-clint-root",
-    name: "DRIP CLINT – ROOT",
+    id: "drip-client-root",
+    name: "DRIP CLIENT – ROOT",
     subtitle: "RANDOM CHEAT SELLING",
     image: "/assets/Drip clint.jpg",
-    description: "Root access solution for maximum control and advanced features.",
+    description: "Root access solution for maximum control and advanced features. Requires root access.",
     features: [
-      "Root access",
-      "Full control",
-      "Advanced features",
-      "Regular updates"
+      "Aim Kill",
+      "Silent Aim",
+      "Silent Kill",
+      "Fly Hack",
+      "God Mode (Ghost)",
+      "Speed Timer",
+      "Teleport 8m",
+      "Up Player",
+      "Auto Swap Weapon",
+      "Runs on root device",
+      "Easy to use"
     ],
     prices: [
       createPrice("1 Day", 2),
