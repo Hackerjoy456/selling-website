@@ -87,11 +87,11 @@ export function ProductCard({ product, onProductClick }: ProductCardProps) {
         )}
       </div>
 
-      <CardHeader className="pb-3 sm:pb-4 relative z-10">
-        <CardTitle className="text-lg sm:text-xl md:text-2xl leading-tight mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#00eaff] group-hover:to-[#ff4fd8] group-hover:bg-clip-text transition-all duration-300 font-black">
+      <CardHeader className="pb-2 sm:pb-3 relative z-10">
+        <CardTitle className="text-base sm:text-lg leading-tight mb-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#00eaff] group-hover:to-[#ff4fd8] group-hover:bg-clip-text transition-all duration-300 font-bold">
           {product.name}
         </CardTitle>
-        <CardDescription className="text-xs sm:text-sm font-bold text-[#a9b0ff]">{product.subtitle}</CardDescription>
+        <CardDescription className="text-[10px] sm:text-xs font-semibold text-[#a9b0ff]">{product.subtitle}</CardDescription>
       </CardHeader>
 
       <CardContent className="flex-1 flex flex-col pt-0 relative z-10">
@@ -123,9 +123,9 @@ export function ProductCard({ product, onProductClick }: ProductCardProps) {
             )}
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">₹{lowestPrice?.inr || 0}</span>
+            <span className="text-lg sm:text-xl md:text-2xl font-black text-white tracking-tight">₹{lowestPrice?.inr || 0}</span>
             {lowestPrice?.bdt && (
-              <span className="text-xs sm:text-sm text-[#a9b0ff] font-bold">({lowestPrice.bdt} BDT)</span>
+              <span className="text-[10px] sm:text-xs text-[#a9b0ff] font-semibold">({lowestPrice.bdt} BDT)</span>
             )}
           </div>
         </div>

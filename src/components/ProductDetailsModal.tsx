@@ -69,9 +69,9 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
           {/* Product Info - Enhanced */}
           <div className="flex-1 space-y-6">
             <div>
-              <p className="text-2xl text-[#a9b0ff] mb-4 font-bold">{product.subtitle}</p>
+              <p className="text-base md:text-lg text-[#a9b0ff] mb-3 font-semibold">{product.subtitle}</p>
               {product.description && (
-                <p className="text-base text-[#cfd6ff] leading-relaxed">{product.description}</p>
+                <p className="text-sm md:text-base text-[#cfd6ff] leading-relaxed">{product.description}</p>
               )}
             </div>
             
@@ -82,14 +82,14 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
                   <TrendingUp className="w-4 h-4 text-[#00eaff]" />
                   <div className="text-xs text-[#a9b0ff] font-semibold uppercase tracking-wider">Price Range</div>
                 </div>
-                <div className="text-2xl font-black text-white">₹{product.prices[0]?.inr} - ₹{product.prices[product.prices.length - 1]?.inr}</div>
+                <div className="text-lg md:text-xl font-black text-white">₹{product.prices[0]?.inr} - ₹{product.prices[product.prices.length - 1]?.inr}</div>
               </div>
               <div className="p-5 rounded-2xl bg-gradient-to-br from-[rgba(138,61,255,0.1)] to-[rgba(138,61,255,0.05)] border-2 border-[rgba(138,61,255,0.3)] backdrop-blur-sm hover:scale-105 transition-transform duration-300">
                 <div className="flex items-center gap-2 mb-2">
                   <Sparkles className="w-4 h-4 text-[#8a3dff]" />
                   <div className="text-xs text-[#a9b0ff] font-semibold uppercase tracking-wider">Plans</div>
                 </div>
-                <div className="text-2xl font-black text-white">{product.prices.length} Options</div>
+                <div className="text-lg md:text-xl font-black text-white">{product.prices.length} Options</div>
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
           <div>
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[rgba(255,79,216,0.5)] to-transparent"></div>
-              <h3 className="text-3xl font-black text-white flex items-center gap-3">
+              <h3 className="text-xl md:text-2xl font-black text-white flex items-center gap-2">
                 <Sparkles className="w-6 h-6 text-[#ff4fd8]" />
                 {t("productDetails.videoDemo")}
               </h3>
@@ -127,7 +127,7 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
           <div>
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[rgba(0,234,255,0.5)] to-transparent"></div>
-              <h3 className="text-3xl font-black text-white flex items-center gap-3">
+              <h3 className="text-xl md:text-2xl font-black text-white flex items-center gap-2">
                 <Sparkles className="w-6 h-6 text-[#00eaff]" />
                 Key Features
               </h3>
@@ -187,7 +187,7 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
                   
                   {price.usdt ? (
                     <>
-                      <div className="text-3xl font-black text-white mb-2 flex items-baseline gap-2">
+                      <div className="text-xl md:text-2xl font-black text-white mb-2 flex items-baseline gap-2">
                         {price.usdt}
                         <span className="text-lg text-[#00eaff]">USDT</span>
                       </div>
@@ -198,7 +198,7 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
                     </>
                   ) : (
                     <>
-                      <div className="text-3xl font-black text-white mb-2">₹{price.inr}</div>
+                      <div className="text-xl md:text-2xl font-black text-white mb-2">₹{price.inr}</div>
                       <div className="text-sm font-semibold text-[#a9b0ff]">{price.bdt} BDT</div>
                     </>
                   )}
@@ -227,16 +227,16 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
                 <div className="grid grid-cols-3 gap-8">
                   <div className="text-center p-5 rounded-2xl bg-[rgba(0,0,0,0.3)] backdrop-blur-sm border border-[rgba(255,255,255,0.1)]">
                     <div className="text-xs text-[#a9b0ff] mb-3 font-bold uppercase tracking-wider">BDT</div>
-                    <div className="text-4xl font-black text-white">{selectedPrice.bdt}</div>
+                    <div className="text-2xl md:text-3xl font-black text-white">{selectedPrice.bdt}</div>
                   </div>
                   <div className="text-center p-5 rounded-2xl bg-[rgba(0,0,0,0.3)] backdrop-blur-sm border-x-2 border-[rgba(255,255,255,0.2)]">
                     <div className="text-xs text-[#a9b0ff] mb-3 font-bold uppercase tracking-wider">INR</div>
-                    <div className="text-4xl font-black text-white">₹{selectedPrice.inr}</div>
+                    <div className="text-2xl md:text-3xl font-black text-white">₹{selectedPrice.inr}</div>
                   </div>
                   {selectedPrice.usdt && (
                     <div className="text-center p-5 rounded-2xl bg-[rgba(0,0,0,0.3)] backdrop-blur-sm border border-[rgba(255,255,255,0.1)]">
                       <div className="text-xs text-[#a9b0ff] mb-3 font-bold uppercase tracking-wider">USDT</div>
-                      <div className="text-4xl font-black bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] bg-clip-text text-transparent">
+                      <div className="text-2xl md:text-3xl font-black bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] bg-clip-text text-transparent">
                         {selectedPrice.usdt}
                       </div>
                     </div>

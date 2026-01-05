@@ -51,15 +51,15 @@ export function CartPage() {
           <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-[rgba(0,234,255,0.2)] to-[rgba(138,61,255,0.2)] flex items-center justify-center border-2 border-[rgba(0,234,255,0.3)]">
             <ShoppingBag className="w-16 h-16 text-[#00eaff]" />
           </div>
-          <h2 className="text-4xl font-black mb-4 bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-3xl font-black mb-3 bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] bg-clip-text text-transparent">
             Your Cart is Empty
           </h2>
-          <p className="text-lg text-[#a9b0ff] mb-8 font-medium">
+          <p className="text-sm md:text-base text-[#a9b0ff] mb-6 font-medium">
             Start adding products to your cart to continue shopping
           </p>
           <Button
             asChild
-            className="rounded-2xl px-8 py-6 text-lg font-black bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] hover:from-[#ff4fd8] hover:to-[#00eaff] shadow-[0_0_40px_rgba(138,61,255,0.6)]"
+            className="rounded-lg px-6 py-4 text-sm md:text-base font-bold bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] hover:from-[#ff4fd8] hover:to-[#00eaff] shadow-[0_0_30px_rgba(138,61,255,0.5)]"
           >
             <Link to="/products" className="flex items-center gap-3">
               <ArrowRight className="w-5 h-5 rotate-180" />
@@ -74,10 +74,10 @@ export function CartPage() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
       <div className="mb-12 text-center">
-        <h1 className="text-5xl md:text-7xl font-black mb-4 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
           Shopping Cart
         </h1>
-        <p className="text-lg md:text-xl text-[#a9b0ff] font-medium">
+        <p className="text-sm md:text-base text-[#a9b0ff] font-medium">
           {items.length} {items.length === 1 ? "item" : "items"} in your cart
         </p>
       </div>

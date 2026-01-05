@@ -81,11 +81,11 @@ export function PaymentPage() {
   return (
     <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
       <div className="text-center mb-8 sm:mb-12">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3 sm:mb-4 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3 sm:mb-4 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
           {t("payment.title")}
         </h1>
-        <div className="h-1 sm:h-2 w-24 sm:w-32 mx-auto bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] rounded-full mb-4"></div>
-        <p className="text-sm sm:text-base md:text-lg text-[#a9b0ff] max-w-2xl mx-auto font-medium">
+        <div className="h-1 w-20 sm:w-24 mx-auto bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] rounded-full mb-4"></div>
+        <p className="text-xs sm:text-sm md:text-base text-[#a9b0ff] max-w-2xl mx-auto font-medium">
           {t("payment.instructions")}
         </p>
       </div>
@@ -100,7 +100,7 @@ export function PaymentPage() {
             <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${method.color} flex items-center justify-center mb-4 sm:mb-6 text-white`}>
               {method.icon}
             </div>
-            <h2 className="text-xl sm:text-2xl font-black text-white mb-4 sm:mb-6">{method.title}</h2>
+            <h2 className="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4">{method.title}</h2>
             
             {/* Important Note for Bangladesh Payment */}
             {method.id === "bd" && (
@@ -195,7 +195,7 @@ export function PaymentPage() {
             <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
           </div>
           <div className="flex-1">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-4 sm:mb-6">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-black text-white mb-3 sm:mb-4">
               {t("payment.instructions")}
             </h3>
             <div className="space-y-3 sm:space-y-4">
@@ -240,7 +240,7 @@ export function PaymentPage() {
       <div className="text-center">
         <Button
           onClick={handleWhatsAppContact}
-          className="rounded-2xl px-8 sm:px-10 md:px-12 py-6 sm:py-7 md:py-8 text-lg sm:text-xl md:text-2xl font-black bg-gradient-to-r from-[#25D366] via-[#00eaff] to-[#8a3dff] hover:from-[#8a3dff] hover:via-[#ff4fd8] hover:to-[#25D366] shadow-[0_0_50px_rgba(37,211,102,0.5)] hover:shadow-[0_0_70px_rgba(37,211,102,0.7)] transition-all duration-500 relative overflow-hidden group"
+          className="rounded-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg font-bold bg-gradient-to-r from-[#25D366] via-[#00eaff] to-[#8a3dff] hover:from-[#8a3dff] hover:via-[#ff4fd8] hover:to-[#25D366] shadow-[0_0_30px_rgba(37,211,102,0.4)] hover:shadow-[0_0_50px_rgba(37,211,102,0.6)] transition-all duration-300 relative overflow-hidden group"
         >
           <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mr-3 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
           <span>{t("payment.sendScreenshot")}</span>

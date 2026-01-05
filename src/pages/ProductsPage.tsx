@@ -57,12 +57,12 @@ export function ProductsPage() {
               <span className="text-xs sm:text-sm font-black text-[#00eaff] uppercase tracking-wider">Premium Collection</span>
               <div className="h-px w-12 sm:w-20 bg-gradient-to-l from-transparent to-[#00eaff]"></div>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-3 sm:mb-4 md:mb-6 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3 sm:mb-4 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent leading-tight">
               {t("products.title")}
             </h1>
-            <div className="h-1 sm:h-2 w-24 sm:w-32 mx-auto bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] rounded-full"></div>
+            <div className="h-1 w-20 sm:w-24 mx-auto bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] rounded-full"></div>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#a9b0ff] max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-[#a9b0ff] max-w-2xl mx-auto font-medium leading-relaxed">
             Discover our premium collection of gaming solutions. Each product is carefully selected for quality and performance.
           </p>
         </div>

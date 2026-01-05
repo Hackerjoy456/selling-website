@@ -32,11 +32,11 @@ export function ContactPage() {
   return (
     <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
       <div className="text-center mb-8 sm:mb-12">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3 sm:mb-4 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3 sm:mb-4 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
           Contact Us
         </h1>
-        <div className="h-1 w-24 mx-auto bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] rounded-full mb-4"></div>
-        <p className="text-base sm:text-lg md:text-xl text-[#a9b0ff] max-w-2xl mx-auto font-medium">
+        <div className="h-1 w-20 mx-auto bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] rounded-full mb-4"></div>
+        <p className="text-sm sm:text-base md:text-lg text-[#a9b0ff] max-w-2xl mx-auto font-medium">
           Get in touch with us. We're here to help 24/7
         </p>
       </div>
@@ -44,7 +44,7 @@ export function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {/* Contact Form */}
         <Card className="p-6 sm:p-8 border-2 border-[rgba(255,255,255,0.1)]">
-          <h2 className="text-2xl sm:text-3xl font-black text-white mb-6">Send us a Message</h2>
+          <h2 className="text-xl sm:text-2xl font-black text-white mb-4">Send us a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
             <div>
               <label className="block text-xs sm:text-sm font-bold text-[#a9b0ff] mb-2">Name</label>
@@ -95,7 +95,7 @@ export function ContactPage() {
             </div>
             <Button
               type="submit"
-              className="w-full rounded-xl py-5 sm:py-6 text-base sm:text-lg font-black bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] hover:from-[#ff4fd8] hover:to-[#00eaff] shadow-[0_0_30px_rgba(138,61,255,0.5)] hover:shadow-[0_0_40px_rgba(138,61,255,0.7)] transition-all duration-300"
+              className="w-full rounded-lg py-3 sm:py-4 text-sm sm:text-base font-bold bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] hover:from-[#ff4fd8] hover:to-[#00eaff] shadow-[0_0_25px_rgba(138,61,255,0.4)] hover:shadow-[0_0_35px_rgba(138,61,255,0.6)] transition-all duration-300"
             >
               <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Send Message
@@ -111,7 +111,7 @@ export function ContactPage() {
                 <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-black text-white mb-2">WhatsApp</h3>
+                <h3 className="text-lg sm:text-xl font-black text-white mb-2">WhatsApp</h3>
                 <p className="text-sm sm:text-base text-[#a9b0ff] mb-3 sm:mb-4 font-medium">Chat with us instantly</p>
                 <Button
                   asChild

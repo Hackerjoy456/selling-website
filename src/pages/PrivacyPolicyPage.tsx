@@ -12,7 +12,7 @@ export function PrivacyPolicyPage() {
             <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-[rgba(0,234,255,0.2)] to-[rgba(138,61,255,0.2)] flex items-center justify-center border-2 border-[rgba(0,234,255,0.3)]">
               <Shield className="w-10 h-10 text-[#00eaff]" />
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
               {t("privacy.title")}
             </h1>
             <div className="h-1 sm:h-2 w-24 sm:w-32 mx-auto bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] rounded-full"></div>
@@ -26,7 +26,7 @@ export function PrivacyPolicyPage() {
           <section className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-[rgba(255,255,255,0.02)] border-2 border-[rgba(255,255,255,0.1)]">
             <div className="flex items-center gap-3 mb-4">
               <FileText className="w-6 h-6 text-[#00eaff]" />
-              <h2 className="text-2xl font-black text-white">{t("privacy.introduction")}</h2>
+              <h2 className="text-xl md:text-2xl font-black text-white">{t("privacy.introduction")}</h2>
             </div>
             <p className="text-sm sm:text-base text-[#cfd6ff] leading-relaxed">
               {t("privacy.introText")}

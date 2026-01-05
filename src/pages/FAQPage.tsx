@@ -46,11 +46,11 @@ export function FAQPage() {
         <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[rgba(0,234,255,0.2)] to-[rgba(138,61,255,0.2)] flex items-center justify-center border-2 border-[rgba(0,234,255,0.3)]">
           <HelpCircle className="w-10 h-10 text-[#00eaff]" />
         </div>
-        <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] bg-clip-text text-transparent">
           Frequently Asked Questions
         </h1>
-        <div className="h-2 w-32 mx-auto bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] rounded-full mb-8"></div>
-        <p className="text-xl md:text-2xl text-[#a9b0ff] max-w-3xl mx-auto font-medium">
+        <div className="h-1 w-24 mx-auto bg-gradient-to-r from-[#00eaff] to-[#ff4fd8] rounded-full mb-6"></div>
+        <p className="text-sm md:text-base text-[#a9b0ff] max-w-3xl mx-auto font-medium">
           Find answers to common questions about our products and services
         </p>
       </div>
@@ -65,7 +65,7 @@ export function FAQPage() {
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
               className="w-full p-6 md:p-8 text-left flex items-center justify-between gap-4 group"
             >
-              <h3 className="text-xl md:text-2xl font-black text-white flex-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#00eaff] group-hover:to-[#ff4fd8] group-hover:bg-clip-text transition-all">
+              <h3 className="text-base md:text-lg font-black text-white flex-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#00eaff] group-hover:to-[#ff4fd8] group-hover:bg-clip-text transition-all">
                 {faq.question}
               </h3>
               <ChevronDown
@@ -80,7 +80,7 @@ export function FAQPage() {
               }`}
             >
               <div className="px-6 md:px-8 pb-6 md:pb-8">
-                <p className="text-lg text-[#a9b0ff] leading-relaxed font-medium">{faq.answer}</p>
+                <p className="text-sm md:text-base text-[#a9b0ff] leading-relaxed font-medium">{faq.answer}</p>
               </div>
             </div>
           </Card>
