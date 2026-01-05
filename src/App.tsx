@@ -18,6 +18,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { GoogleTranslate } from "@/components/GoogleTranslate";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { DisclaimerModal } from "@/components/DisclaimerModal";
+import { ProductDetailsPage } from "@/pages/ProductDetailsPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <main className="flex-1">
                 <Routes>
                   <Route path="/" element={<HomePage />} />
+                  <Route path="/products/:productId" element={<ProductDetailsPage />} />
                   <Route path="/products" element={<ProductsPage />} />
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/wishlist" element={<WishlistPage />} />

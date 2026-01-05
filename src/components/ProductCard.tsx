@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Product } from "@/types";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Sparkles, ArrowRight, Heart, Eye } from "lucide-react";
@@ -36,10 +37,10 @@ export function ProductCard({ product, onProductClick }: ProductCardProps) {
     <>
       <Card 
         className="h-full flex flex-col group cursor-pointer overflow-hidden relative transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_50px_rgba(138,61,255,0.4)] border-2 border-[rgba(255,255,255,0.1)]"
-        onClick={() => onProductClick(product)}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
+        <Link to={`/products/${product.id}`} className="absolute inset-0 z-0" aria-label={`View details for ${product.name}`} />
       {/* Animated Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[rgba(0,234,255,0.05)] via-transparent to-[rgba(138,61,255,0.05)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
@@ -131,18 +132,16 @@ export function ProductCard({ product, onProductClick }: ProductCardProps) {
         </div>
 
         {/* CTA Button */}
-        <button
-          className="w-full mt-4 sm:mt-5 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] text-white font-black text-sm sm:text-base transition-all duration-300 hover:shadow-[0_0_25px_rgba(138,61,255,0.6)] hover:scale-[1.01] relative overflow-hidden group/btn border-0"
+        <Link
+          to={`/products/${product.id}`}
+          className="w-full mt-4 sm:mt-5 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#00eaff] via-[#8a3dff] to-[#ff4fd8] text-white font-black text-sm sm:text-base transition-all duration-300 hover:shadow-[0_0_25px_rgba(138,61,255,0.6)] hover:scale-[1.01] relative overflow-hidden group/btn border-0 flex items-center justify-center gap-2 sm:gap-3 z-10"
           onClick={(e) => {
             e.stopPropagation();
-            onProductClick(product);
           }}
         >
-          <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
-            <span>{t("products.viewDetails")}</span>
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-          </span>
-        </button>
+          <span>{t("products.viewDetails")}</span>
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+        </Link>
       </CardContent>
     </Card>
 
