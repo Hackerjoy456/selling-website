@@ -12,26 +12,21 @@ export function ProductDetailsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log("ProductDetailsPage - productId:", productId);
     if (productId) {
       const foundProduct = products.find((p) => p.id === productId);
-      console.log("ProductDetailsPage - foundProduct:", foundProduct);
       if (foundProduct) {
         setProduct(foundProduct);
         setIsLoading(false);
         // Small delay to ensure modal renders properly
         setTimeout(() => {
-          console.log("ProductDetailsPage - Opening modal");
           setIsModalOpen(true);
         }, 100);
       } else {
         // Product not found, redirect to products page
-        console.log("ProductDetailsPage - Product not found, redirecting");
         setIsLoading(false);
         navigate("/products", { replace: true });
       }
     } else {
-      console.log("ProductDetailsPage - No productId, redirecting");
       setIsLoading(false);
       navigate("/products", { replace: true });
     }
