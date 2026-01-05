@@ -14,15 +14,22 @@ function createPrice(duration: string, usdt: number, note?: string) {
 export const products: Product[] = [
   {
     id: "drip-clint-mobile",
-    name: "DRIP CLINT – MOBILE",
+    name: "DRIP CLIENT MOD MENU APK",
     subtitle: "RANDOM CHEAT SELLING",
     image: "/assets/Drip clint.jpg",
-    description: "Advanced mobile gaming solution with premium features and undetected gameplay.",
+    description: "Advanced mobile gaming solution with premium features. Runs directly on your phone and is easy to use.",
     features: [
-      "Undetected gameplay",
-      "Auto aim & ESP",
-      "Wallhack features",
-      "Mobile optimized"
+      "Aim Kill",
+      "Silent Aim",
+      "Silent Kill",
+      "Fly Hack",
+      "God Mode (Ghost)",
+      "Speed Timer",
+      "Teleport 8m",
+      "Up Player",
+      "Auto Swap Weapon",
+      "Runs directly on phone",
+      "Easy to use"
     ],
     prices: [
       createPrice("1 Day", 2),
@@ -70,15 +77,25 @@ export const products: Product[] = [
   },
   {
     id: "br-mods-root",
-    name: "BR MODS – ROOT",
+    name: "BR MODE INJECTOR",
     subtitle: "RANDOM CHEAT SELLING",
     image: "/assets/br.png.jpg",
-    description: "Battle Royale mods with root access for enhanced gameplay experience.",
+    description: "Advanced BR mode injector with silent aim and emulator bypass. Play in mobile lobby with BR mode features.",
     features: [
-      "BR optimized",
-      "Root required",
-      "Enhanced mods",
-      "Safe & secure"
+      "Silent Aim Bot",
+      "Headshot Hack",
+      "Aim FOV 360",
+      "Aim Magnet",
+      "Speed Hack",
+      "Ghost Hack",
+      "ESP Location",
+      "CS/BR Rank Working",
+      "Emulator Bypass",
+      "Play in Mobile Lobby",
+      "VphoneOS Non Root",
+      "Root Device Support",
+      "Emulator Compatible",
+      "100% Rank Working"
     ],
     prices: [
       createPrice("7 Days", 4),
@@ -91,8 +108,12 @@ export const products: Product[] = [
     name: "BR MODS – BYPASS PC",
     subtitle: "RANDOM CHEAT SELLING",
     image: "/assets/br.png.jpg",
-    description: "Advanced bypass system for PC with anti-detection technology.",
+    description: "Advanced bypass system for PC with emulator bypass. Play in mobile lobby with BR mode silent aim features.",
     features: [
+      "Emulator Bypass",
+      "Play in Mobile Lobby",
+      "BR Mode Silent Aim",
+      "Silent Aim (Main Feature)",
       "Anti-detection",
       "Bypass system",
       "PC optimized",
@@ -195,15 +216,23 @@ export const products: Product[] = [
   },
   {
     id: "fluorite-ios",
-    name: "FLUORITE iOS – FREE FIRE",
+    name: "FLUORITE iOS PANEL",
     subtitle: "iPhone 6–17",
     image: "/assets/Flourite.jpg",
-    description: "iOS optimized solution for iPhone users with full device support.",
+    description: "Advanced iOS panel with game-changing features. Main ID safe, no iPhone restart required - plug & play.",
     features: [
-      "iOS optimized",
-      "iPhone 6-17 support",
-      "Full device support",
-      "G-Box compatible"
+      "Aimbot – Neck | Head | Body",
+      "Bone Aimbot – Pinpoint Accuracy",
+      "Silent Aim – No Movement, Just Kill",
+      "Custom AimFOV – Smooth Control",
+      "Speed Boost – 10x Faster Than Normal",
+      "ESP Location – See Enemies Before They See",
+      "Streamer Mode – For Secret Play",
+      "Main ID Safe",
+      "No iPhone Restart – Plug & Play",
+      "Advanced AntiBan – Maximum Protection",
+      "No ESP/Aim Visible in Screen Share",
+      "Instant Panel Hide in 1 Click"
     ],
     prices: [
       createPrice("1 Day", 4),
