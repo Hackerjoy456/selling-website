@@ -244,6 +244,7 @@ export const products: Product[] = [
     prices: [
       createPrice("1 Day", 5),
       createPrice("7 Days", 17),
+      createPrice("1 Month", 35, "Direct"),
       createPrice("1 Month + G-BOX", 45),
     ],
     videoUrl: "https://youtu.be/H1X8H0EIiMo",
