@@ -30,10 +30,10 @@ export const products: Product[] = [
       "🎚️ Auto Swap Weapon"
     ],
     prices: [
-      createPrice("1 Day", 2),
-      createPrice("7 Days", 4),
-      createPrice("15 Days", 8),
-      createPrice("30 Days", 11),
+      createPrice("1 Day", 3),
+      createPrice("7 Days", 5),
+      createPrice("15 Days", 13),
+      createPrice("30 Days", 20),
     ],
   },
   {
